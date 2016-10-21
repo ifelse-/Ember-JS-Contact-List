@@ -1,0 +1,108 @@
+{{#contact-new store=store}}{{/contact-new}}
+<div class="row">
+  <div class="col-md-12">
+  <h1>{{title}}</h1>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+<div class="col-md-4">
+{{#link-to 'contacts.new' class='btn btn-primary btn-lg btn-block'}}Try Controller: Create New Contact{{/link-to}}
+</div>
+<br class="rwd-break" />
+<div class="col-md-4">
+<button class="btn btn-info btn-lg btn-block" {{action "openPanel"}}>Try Component: Create New Contact</button>
+</div>
+</div>
+
+<hr>
+{{outlet}}
+
+<div class="contacts-wrapper">
+  
+
+<div class="row">  
+<!-- Contact List -->
+ <div class="col-md-7">
+  <div class="contact-search">
+    <div class="search-wrapper">
+      {{input value=filter id=search placeholder='Search List...'}}
+    </div>
+    <ul class="contacts-list">
+      {{#if filter}}
+        {{#each filteredContacts as |contact|}}
+        <li class="contact selectable {{if (eq contact selectedObject) 'active'}}" {{action 'updateSelectedObject' contact}}>
+          <div class="photo-wrapper">
+            <img src="{{contact.picture}}" alt="">
+          </div>
+          <div class="information">
+            <h2 class="name">{{contact.firstName}} {{contact.lastName}}</h2>
+            <p class="title-company">
+              {{contact.jobTitle}} at {{contact.company}}
+            </p>
+          </div>
+        </li>
+      {{/each}}
+      {{else}}
+      {{#each sortedContacts as |contact|}}
+        <li class="contact selectable {{if (eq contact selectedObject) 'active'}}" {{action 'updateSelectedObject' contact}}>
+          <div class="photo-wrapper">
+            <img src="{{contact.picture}}" alt="">
+          </div>
+          <div class="information">
+            <h2 class="name">{{contact.firstName}} {{contact.lastName}}</h2>
+            <p class="title-company">
+              {{contact.jobTitle}} at {{contact.company}}
+            </p>
+          </div>
+        </li>
+      {{/each}}
+      {{/if}}
+    </ul>
+  </div>
+ </div> 
+
+<!-- Contact Details -->
+ <div class="col-md-5">
+  <div class="contact-detail">
+    {{#with selectedObject as |contact|}}
+      <div class="contact contact-banner">
+        <div class="photo-wrapper">
+          <img src="{{contact.picture}}" alt="">
+        </div>
+        <div class="information">
+          <h2 class="light name">{{contact.firstName}} {{contact.lastName}}</h2>
+          <p class="light-blue title-company">
+            {{contact.jobTitle}} at {{contact.company}}
+          </p>
+        </div>
+      </div>
+      <div class="contact-details">
+        <div class="contact-section">
+          <h4 class="section-title">Contact</h4>
+          <table class="contact-items">
+            <tbody>
+              <tr>
+                <td class="icon">{{fa-icon 'phone'}}</td>
+                <td class="phone">{{contact.phone}}</td>
+              </tr>
+              <tr>
+                <td class="icon">{{fa-icon 'envelope-o'}}</td>
+                <td class="email">{{contact.email}}</td>
+              </tr>
+              <tr>
+                <td class="icon">{{fa-icon 'birthday-cake'}}</td>
+                <td class="birthday">{{format-date contact.birthday}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {{/with}}
+  </div>
+</div>
+
+</div>
+</div>

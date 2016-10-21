@@ -1,0 +1,461 @@
+@import './bower_components/nib'
+global-reset()
+reset-html5()
+
+lineColor = #EAEFF3
+standardBorder = 1px solid lineColor
+backgroundColor = #F7FAFC
+accentBlue = #4F90D3
+fontBlue = #2E7CCE
+fontColor = #778795
+
+body {
+  font-family: 'Open Sans', sans-serif
+  color: fontColor
+  height: 100%
+  font-size: 24px
+
+  & > div.ember-view {
+    fixed: top 0 left 0 right 0 bottom 0
+    display: flex
+  }
+}
+
+@media (max-width: 1600px) {
+  body {
+    font-size: 22px
+  }
+}
+
+@media (max-width: 1400px) {
+  body {
+    font-size: 20px
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 18px
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 16px
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 14px
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px
+  }
+}
+
+a {
+  color: fontBlue
+}
+
+p {
+  font-size: 0.75em
+
+  &.light-blue {
+    color: lighten(fontBlue, 70%)
+  }
+}
+
+input[type="text"] {
+  font-size: 0.75em
+  font-family: 'Open Sans', sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: fontBlue
+
+  &.light {
+    color: white
+  }
+}
+
+/******** Reusable Styles **********/
+
+
+/* Top Space */
+
+.top-offset {
+  margin-top: 5px;
+}
+
+.top-offset1 {
+  margin-top: 10px;
+}
+
+.top-offset2 {
+  margin-top: 20px;
+}
+
+.top-offset3 {
+  margin-top: 30px;
+}
+
+.top-offset4 {
+  margin-top: 40px;
+}
+
+.top-offset5 {
+  margin-top: 50px;
+}
+
+.top-offset6 {
+  margin-top: 60px;
+}
+
+.top-offset7 {
+  margin-top: 70px;
+}
+
+.top-offset8 {
+  margin-top: 80px;
+}
+
+.top-offset9 {
+  margin-top: 90px;
+}
+
+.top-offset9 {
+  margin-top: 100px;
+}
+
+
+/* Bottom Space */
+
+.bottom-offset {
+  margin-bottom: 5px !important;
+}
+
+.bottom-offset1 {
+  margin-bottom: 10px;
+}
+
+.bottom-offset2 {
+  margin-bottom: 20px;
+}
+
+.bottom-offset3 {
+  margin-bottom: 30px;
+}
+
+.bottom-offset4 {
+  margin-bottom: 40px;
+}
+
+.bottom-offset5 {
+  margin-bottom: 50px;
+}
+
+.bottom-offset6 {
+  margin-bottom: 60px;
+}
+
+.bottom-offset7 {
+  margin-bottom: 70px;
+}
+
+.bottom-offset8 {
+  margin-bottom: 80px;
+}
+
+.bottom-offset9 {
+  margin-bottom: 90px;
+}
+
+.bottom-offset9 {
+  margin-bottom: 100px;
+}
+
+.small-txt{
+    font-size:12px
+    margin-top:5px
+    color:#000
+   }
+   
+ .rwd-break {
+      display:none
+     }  
+
+/******** Reusable Ends **********/
+
+
+.instructions {
+  position: absolute
+  opacity: 0
+}
+
+.contacts-wrapper {
+  border: standardBorder
+  /*display: flex
+  flex-grow: 1*/
+  margin: 1em
+  border-radius: 3px
+  position: relative
+  
+
+  .contact-detail {
+    flex: 5 1 auto
+    
+     .contact-details {
+      padding: 1em
+      /*width: 457px*/
+
+      .section-title {
+        font-size: 1.2em
+        text-transform: uppercase
+        color: fontColor
+        margin-bottom: 0.5em
+      }
+
+      .contact-items {
+        font-size: 1em
+
+        td {
+          padding: 0.75em 0.5em
+          vertical-align: center
+        }
+
+        td.icon {
+          padding-left: 0
+          font-size: 1.5em
+          color: accentBlue
+        }
+      }
+    }
+  }
+  
+
+  .contact-search {
+    border-right: standardBorder
+    background: backgroundColor
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+
+    .search-wrapper {
+      flex: 0 0 auto
+      border-bottom: standardBorder
+      display: flex
+
+      input {
+        flex-grow: 1
+        border: 0px !important
+        outline: none
+        margin: 0
+        padding: 1em
+        background: #eaeff7
+      }
+    }
+
+    .contacts-list {
+      flex: 1 1 auto
+      overflow: scroll
+    }
+    
+     li {
+      text-decoration: none
+      color: #000
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease
+      -moz-transition: font-size 0.3s ease, background-color 0.3s ease
+      -o-transition: font-size 0.3s ease, background-color 0.3s ease
+      -ms-transition: font-size 0.3s ease, background-color 0.3s ease
+      transition: font-size 0.3s ease, background-color 0.3s ease
+      /*width: 637px*/
+    }
+
+
+    li:hover {
+      font-size: 30px
+      background: #8dc5d6
+    }
+
+  }
+}
+
+.contact {
+  display: flex
+  align-items: center
+  position: relative
+  border-bottom: standardBorder
+
+  .photo-wrapper {
+    margin: 0.5em
+    height: 2em
+    width: 2em
+    border-radius: 2em
+    overflow: hidden
+    position: relative
+    border: 2px solid #fff
+
+    img {
+      max-width: 100%
+      max-height: 100%
+    }
+  }
+
+  .information {
+    margin: 0.5em
+
+    h2 {
+      margin-bottom: 0.4em
+    }
+
+    p {
+      font-size: 0.7em
+    }
+  }
+
+  &.contact-banner {
+    background: accentBlue
+    padding: 0.5em
+    color: white
+  }
+
+  &.selectable {
+    cursor: pointer
+    user-select: none
+
+    &:before {
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      width: 3px
+      background: rgba(0,0,0,0)
+      content: ' '
+    }
+
+    &:hover:before {
+      background: lighten(accentBlue, 50%)
+      padding
+      
+    }
+
+    &.active:before {
+      background: accentBlue
+    }
+  }
+}
+
+
+.container-top {
+  margin-top: 6em
+  overflow: scroll
+}
+
+.logo-brand {
+  float: left
+  font-size: 18px
+  height: 50px
+  line-height: 20px
+  padding: 15px
+  color:#F1CA4F
+  font-weight:bold
+}
+
+/******** Form **********/
+
+
+.form-group label {
+  font-size:14px
+  margin-bottom:10px
+  font-weight:bold
+}
+
+/******** Form End **********/
+
+.slide-panel {
+    background: #f90 none repeat scroll 0 0
+    color: #000
+    height: 100%
+    left:-1000px
+    position: absolute
+    top: 0
+    width: 40%
+    z-index: 2
+    padding:5em 55px 20px
+    -webkit-box-shadow: 16px 11px 32px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 11px 32px -19px rgba(0,0,0,0.75);
+    box-shadow: 16px 11px 32px -19px rgba(0,0,0,0.75);
+    
+     h1 {
+       color:#000
+       font-size:24px
+     }
+     
+}
+
+.close-panel {
+  text-align: right
+  margin-bottom:1em
+}
+
+.info-content {
+    h4 {
+      color:#449D44
+      margin-bottom:5px
+    }
+    
+    p {
+      margin-bottom:25px
+      line-height: 23px
+    }
+}
+
+/******** Slide Panel End **********/
+
+
+
+/*********** Mobile **********/
+@media only screen and (max-device-width: 480px) {
+   
+     .btn-block {
+      font-size:12px
+     }
+     
+     .rwd-break {
+      display:block
+      margin-top:10px
+     }
+     
+     .contact-search {
+       
+       li {
+      text-decoration: none
+      color: #000
+      -webkit-transition: font-size 0.1s ease, background-color 0.3s ease
+      -moz-transition: font-size 0.1s ease, background-color 0.3s ease
+      -o-transition: font-size 0.1s ease, background-color 0.3s ease
+      -ms-transition: font-size 0.1s ease, background-color 0.3s ease
+      transition: font-size 0.1s ease, background-color 0.3s ease
+      /*width: 637px*/
+      }
+
+       li:hover {
+        font-size: 20px !important
+        background: #8dc5d6
+       }
+       
+     }
+     
+     .slide-panel { 
+       width:100%
+       padding: 10em 55px 20px;
+       overflow:scroll
+     }
+
+  }
+  
+

@@ -1,0 +1,67 @@
+{{yield}}
+<div class="slide-panel">
+
+<div class="row">
+  <div class="col-md-12 close-panel">
+     <button class="btn btn-secondary" {{action "closePanel"}}>Close Panel</button>
+  </div>
+</div>	
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Add New Contact</h1>
+  </div>
+</div>
+
+<div class="row top-offset2">
+  <div class="col-md-12">
+	<form {{action 'addContact' on='submit'}}>
+	  <div class="form-group">	
+	    <label for="firstName">First Name</label>
+	    {{input type="text" class="form-control" placeholder="Enter First Name" value=firstName}}
+	  </div>
+
+	  <div class="form-group">
+	    <label for="lastName">Last Name</label>
+	    {{input type="text" class="form-control" placeholder="Enter Last Name" value=lastName}}
+	 </div>
+
+	  <div class="form-group">
+	    <label for="jobTitle">Job Title Name</label>
+	    {{input type="text" class="form-control" placeholder="Enter Job Title" value=jobTitle}}
+	 </div>
+	 
+	  <div class="form-group">
+	    <label for="companyName">Company Name</label>
+	    {{input type="text" class="form-control" placeholder="Enter Compnay Name" value=companyName}}
+	  </div> 
+	  
+	  <div class="form-group">
+	    <label for="birthdayName">Birthday Name</label>
+	    {{date-picker date=mydate valueFormat="MM-DD-YYYY" class="form-control" value=birthday}}
+	 </div>
+
+	  <div class="form-group">
+	    <label for="emailAddress">Email Address</label>
+	    {{input type="email" class="form-control" placeholder="Enter Email Address" value=emailAddress}}
+	  </div>
+
+	  <div class="form-group">
+	    <label for="phoneNumber">Phone Number</label>
+	    {{input type="number" class="form-control" placeholder="Enter Phone number" value=phoneNumber}}
+	  </div>
+
+	  <div class="form-group">
+	    <label for="picture">Picture URL</label>
+	     {{input type="text" class="form-control" placeholder="Google picture URL" value=picture}}
+	    <p class="small-txt">http://www.amusingtime.com/images/050/cute-baby-giraffe-smiley-face-funny-photo.jpg</p>
+	  </div>
+
+	    {{input type="submit" class="btn btn-primary" value='Submit'}}
+	</form>
+	</div>
+</div>
+
+</div>
+
+
