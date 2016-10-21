@@ -1,10 +1,4 @@
-# Ravel Coding Challenge
-
-This coding challenge is meant to be a way for you to demonstrate you at your best. The only requirement or constraint is that you start here and continue building with Ember. If you follow the instructions below to start the Ember server and visit [http://localhost:4200](http://localhost:4200), you'll see what there is to start with.
-
-Feel free to change it, fix it, test it, or complete it using whatever patterns you feel best apply. Install any addons or use any external libraries that you think are useful. Do as much or as little as you think expresses your skills. 
-
-*There are no right or wrong answers. Be creative.* 
+# EmberJS Contact List
 
 ## Prerequisites
 
